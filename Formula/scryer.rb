@@ -7,7 +7,7 @@ class Scryer < Formula
   on_macos do
     on_arm do
       url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.9.13/scryer-darwin-arm64.tar.gz"
-      sha256 "22397123c6f53472cd0c9f101ae5ce820da70c08fe57197e2b8d04defe158f88"
+      sha256 "5de9d00b6271d5a317bfc941a21be7e06f01ad17318e3ba4597182328924b1e2"
 
       def install
         bin.install "scryer"
@@ -16,7 +16,7 @@ class Scryer < Formula
 
     on_intel do
       url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.9.13/scryer-darwin-x86_64.tar.gz"
-      sha256 "676423e6c5144ac2044f4463de0019d375b5485038a6b575a2a0da6096abe931"
+      sha256 "ba8e6abbfd69421c15baeec506fbb3fd7f930f1bb32dc008e9e4d3435a4f707b"
 
       def install
         bin.install "scryer"
@@ -27,7 +27,7 @@ class Scryer < Formula
   on_linux do
     on_arm do
       url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.9.13/scryer-linux-arm64.tar.gz"
-      sha256 "6e89930f36b0288eb808aaad0a2549f6651dec799f9bcd5c52d4e8dc953bc7b7"
+      sha256 "3025e696809c8e20f88863fa6d42ff4d6f066d1ba3d287a868ebc869dd1c7c91"
 
       def install
         bin.install "scryer"
@@ -36,7 +36,7 @@ class Scryer < Formula
 
     on_intel do
       url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.9.13/scryer-linux-x86_64.tar.gz"
-      sha256 "e52b7216573a3358c2ea80f64c12348279dd6e97434ad06b7b617df73f2ac454"
+      sha256 "7946afb1bd60a4fdad3560ec18f4a715b0f38abc68d1133a555cb2d53c5d1e76"
 
       def install
         bin.install "scryer"

@@ -1,13 +1,13 @@
 class Scryer < Formula
   desc "Self-hosted media acquisition and management platform"
   homepage "https://github.com/scryer-media/scryer"
-  version "0.10.5"
+  version "0.10.7"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.5/scryer-darwin-arm64.tar.gz"
-      sha256 "8a0c4c51b0ebed9f1fe570197257a6ac1f35412570433ae41958e32039247e43"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.7/scryer-darwin-arm64.tar.gz"
+      sha256 "aee695debaac09f6b50840edc4cc0901ad9fbbccddeff57d5dd14708c9608cc0"
 
       def install
         bin.install "scryer"
@@ -15,8 +15,8 @@ class Scryer < Formula
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.5/scryer-darwin-x86_64.tar.gz"
-      sha256 "b694aa0df526a48c5d012558296c39dec0ec237e4543e4640f32a6ad61fddf9b"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.7/scryer-darwin-x86_64.tar.gz"
+      sha256 "f8c4d0d1cbb986cc8f2c25cf5d006e1a373eaf3f0c666dccc34cbfb53894dac5"
 
       def install
         bin.install "scryer"
@@ -26,8 +26,8 @@ class Scryer < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.5/scryer-linux-arm64.tar.gz"
-      sha256 "9d2f3f4fe1521d9c8047ceea824f386d57ca64887e7de335c92f416187faf37d"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.7/scryer-linux-arm64.tar.gz"
+      sha256 "6fcb7d1c5aad1f51c045a2e0708b72c7259e5af501ebfd60b146bc414e6450a1"
 
       def install
         bin.install "scryer"
@@ -35,8 +35,8 @@ class Scryer < Formula
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.5/scryer-linux-x86_64.tar.gz"
-      sha256 "81bc5e19b1fa9a17b6e71ab07f46da66a068bcb2d291ebb9ec57af7cabf71671"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.10.7/scryer-linux-x86_64.tar.gz"
+      sha256 "a0044b357294763d17845040696e77ab3ccfbf8eaf76238ff59a8acf6f96ec77"
 
       def install
         bin.install "scryer"

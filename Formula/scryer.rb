@@ -6,11 +6,8 @@ class Scryer < Formula
 
   def install_support_files
     (pkgshare/"config.env.example").write <<~EOS
-      # Example overrides for the Homebrew-managed scryer service.
-      # Uncomment and edit as needed, then copy this file to:
-      #   #{etc}/scryer/config.env
-      #
-      # SCRYER_BIND=127.0.0.1:8090
+      # Homebrew-managed Scryer service overrides.
+      SCRYER_BIND=127.0.0.1:8686
     EOS
 
     (libexec/"scryer-service").write <<~SH
@@ -56,15 +53,21 @@ class Scryer < Formula
   def install
     bin.install "scryer"
     install_support_files
+
+    config_dir = etc/"scryer"
+    config_dir.mkpath
+    config_file = config_dir/"config.env"
+    return if config_file.exist?
+
+    config_file.write <<~EOS
+      SCRYER_BIND=127.0.0.1:8686
+    EOS
   end
 
   def caveats
     <<~EOS
-      To customize the Homebrew-managed service environment:
-        mkdir -p #{etc}/scryer
-        cp #{opt_pkgshare}/config.env.example #{etc}/scryer/config.env
-
-      Then edit #{etc}/scryer/config.env and restart the service:
+      Edit #{etc}/scryer/config.env to customize the Homebrew-managed service,
+      then restart it with:
         brew services restart scryer
     EOS
   end

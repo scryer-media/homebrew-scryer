@@ -1,7 +1,7 @@
 class Scryer < Formula
   desc "Self-hosted media acquisition and management platform"
   homepage "https://github.com/scryer-media/scryer"
-  version "0.14.2"
+  version "0.14.3"
   license "MIT"
 
   def install_support_files
@@ -14,13 +14,13 @@ class Scryer < Formula
       #!/bin/sh
       CONFIG_FILE="#{etc}/scryer/config.env"
 
-      if [ -f "$CONFIG_FILE" ]; then
+      if [ -f "" ]; then
         set -a
-        . "$CONFIG_FILE"
+        . ""
         set +a
       fi
 
-      exec "#{opt_bin}/scryer" --data-dir "#{var}/scryer" "$@"
+      exec "#{opt_bin}/scryer" --data-dir "#{var}/scryer" ""
     SH
 
     chmod 0755, libexec/"scryer-service"
@@ -28,25 +28,25 @@ class Scryer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.2/scryer-darwin-arm64.tar.gz"
-      sha256 "5c46c20d49438693f4490629b639e46eb6dcc16a028f584973ff79a7f3daa62b"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.3/scryer-darwin-arm64.tar.gz"
+      sha256 "a3a4f691892037ca2f54d3b73d8ce3f97f3afd8131dad8ba4e52b205363d3d38"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.2/scryer-darwin-x86_64.tar.gz"
-      sha256 "dde7be3002039df76467380f876ded78f2c6d1982207bf37cd154a220adba312"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.3/scryer-darwin-x86_64.tar.gz"
+      sha256 "3bb34e7df84b2979bf5355700d298e064e2bfa0fdfc550cf2736e964383d112f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.2/scryer-linux-arm64.tar.gz"
-      sha256 "cdae89f16e098c6a6ab7a36467072254e953a0c013e8ef75f3025c3157bb19d0"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.3/scryer-linux-arm64.tar.gz"
+      sha256 "bed07834a6affa7ceda58dce792f35989a7aec4b629bcd2e6432fa2cbd1d2da0"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.2/scryer-linux-x86_64.tar.gz"
-      sha256 "47c2d19ea396e55bc73cbb424ef272b0659d138f3e172bdf299a7b347d57f259"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.3/scryer-linux-x86_64.tar.gz"
+      sha256 "7c8eaf53461a4061d538bed491e2bfbf2983743aed42c8b07fc6da8c2681c6b0"
     end
   end
 
@@ -57,11 +57,11 @@ class Scryer < Formula
     config_dir = etc/"scryer"
     config_dir.mkpath
     config_file = config_dir/"config.env"
-    return if config_file.exist?
-
-    config_file.write <<~EOS
-      SCRYER_BIND=127.0.0.1:8686
-    EOS
+    unless config_file.exist?
+      config_file.write <<~EOS
+        SCRYER_BIND=127.0.0.1:8686
+      EOS
+    end
   end
 
   def caveats

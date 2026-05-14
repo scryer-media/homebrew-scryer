@@ -1,7 +1,7 @@
 class Scryer < Formula
   desc "Self-hosted media acquisition and management platform"
   homepage "https://github.com/scryer-media/scryer"
-  version "0.14.5"
+  version "0.14.6"
   license "MIT"
 
   def install_support_files
@@ -28,25 +28,25 @@ class Scryer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.5/scryer-darwin-arm64.tar.gz"
-      sha256 "1b269267a8e9e006d409327d32420692fa02f89f4e1c9710e1e8614955fdc1e9"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.6/scryer-darwin-arm64.tar.gz"
+      sha256 "74bf1c0e4c5cad7cdec06933d5edf660a92b110fc04ee7057f89f4ac9a71cea0"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.5/scryer-darwin-x86_64.tar.gz"
-      sha256 "687139ce6888eb464026ade2161cec0a26e8226bba45d75f5110acea3794499d"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.6/scryer-darwin-x86_64.tar.gz"
+      sha256 "e1062e4bb01c571671e0974478a9d56f334432bea4b0dbcfd8623be64711709f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.5/scryer-linux-arm64.tar.gz"
-      sha256 "890a78374dea34fa0bbb712fb747b74f856d46457bc014da2c3df69dded8eee8"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.6/scryer-linux-arm64.tar.gz"
+      sha256 "a4b9fe8865a647af9bacf07cd2c4939749819fd782f6ee68367e9f3cc6b45466"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.5/scryer-linux-x86_64.tar.gz"
-      sha256 "572ea3c2b2760af97ed2d27f2e48470b19fe29dd4fa87f2e11dd5ad5f1986c99"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.14.6/scryer-linux-x86_64.tar.gz"
+      sha256 "2faa98a8de365beeb5323f78229c1bede13ff66028e99ac9c81ad4c39e459b14"
     end
   end
 

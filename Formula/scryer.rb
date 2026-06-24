@@ -1,7 +1,7 @@
 class Scryer < Formula
   desc "Self-hosted media acquisition and management platform"
   homepage "https://github.com/scryer-media/scryer"
-  version "0.16.3"
+  version "0.16.4"
   license "MIT"
 
   def install_support_files
@@ -28,25 +28,25 @@ class Scryer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.3/scryer-darwin-arm64-portable.tar.gz"
-      sha256 "01247925a80973a7bcdfcd91428c303b1046c40e47d66b9662bde85daf519529"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.4/scryer-darwin-arm64-portable.tar.gz"
+      sha256 "c1d7a0fb276fedb77a4dd2ab892ffa02d52ac925752f4827f0ccca5fec405424"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.3/scryer-darwin-x86_64-portable.tar.gz"
-      sha256 "187bcaab03ada294d1199144e3ae2af90041acbe09a48ab56982ec97a456c803"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.4/scryer-darwin-x86_64-portable.tar.gz"
+      sha256 "a9c93cff708ca34e7c59e59930b049e1cbcdbca07818dfa6ea1935a0074178e8"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.3/scryer-linux-arm64-portable.tar.gz"
-      sha256 "733c3359a176a436dcfb3e051e27d77ec82a02b6360001b7cac6da627d8e1a04"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.4/scryer-linux-arm64-portable.tar.gz"
+      sha256 "ecba8c008d9cd1045a9d84eccdf8377d7a0bf9969189e24e752aa219f7160e30"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.3/scryer-linux-x86_64-portable.tar.gz"
-      sha256 "160844441c65dfbcf6178c8024240691aac11d003598078fe83a2a10815f806d"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.16.4/scryer-linux-x86_64-portable.tar.gz"
+      sha256 "d65f4d4bab77804efc2acc2f761b1581874486dd292556ae7a2b25ff1f9f7562"
     end
   end
 

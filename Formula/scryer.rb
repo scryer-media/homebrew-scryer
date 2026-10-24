@@ -1,7 +1,7 @@
 class Scryer < Formula
   desc "Self-hosted media acquisition and management platform"
   homepage "https://github.com/scryer-media/scryer"
-  version "0.17.3"
+  version "0.21.20"
   license "MIT"
 
   def install_support_files
@@ -20,6 +20,9 @@ class Scryer < Formula
         set +a
       fi
 
+      SCRYER_PACKAGE=homebrew
+      export SCRYER_PACKAGE
+
       exec "#{opt_bin}/scryer" --data-dir "#{var}/scryer" "$@"
     SH
 
@@ -28,25 +31,25 @@ class Scryer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.17.3/scryer-darwin-arm64-portable.tar.gz"
-      sha256 "9137220c4f613d8770a12d7307fb67f30d1370f2ad155c8a635cd6a7722e2e11"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.20/scryer-darwin-arm64-portable.tar.gz"
+      sha256 "42d8902e0e41b9bdc609d1989f23cf23d2bdbde3c7afe0c3184cff5dd46fb236"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.17.3/scryer-darwin-x86_64-portable.tar.gz"
-      sha256 "a82027d6d4006e1d8dad24309cb015d0861dbb2d5cf376545841c58f91ac55db"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.20/scryer-darwin-x86_64-portable.tar.gz"
+      sha256 "34352f0ca697fabcc6cebef61a8c83cedfdf27e0ca85947b9ea7e718008934d5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.17.3/scryer-linux-arm64-portable.tar.gz"
-      sha256 "09de06a06f01278c72f03e2244549118ea3e9e170541f0f84c5e5f62184d6b90"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.20/scryer-linux-arm64-portable.tar.gz"
+      sha256 "06f6d10a94fc01ca42b3f3b3422374daf02d005969334776db9c49dc9034bd04"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.17.3/scryer-linux-x86_64-portable.tar.gz"
-      sha256 "1d6a047c0894376e50d26624d7e244b98e0ae9f09cb56303602af35dba5b482f"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.20/scryer-linux-x86_64-portable.tar.gz"
+      sha256 "949192612fc722baf73ec2a27d81a964cc778c774bf6ef5f8c048b9b014c9fce"
     end
   end
 

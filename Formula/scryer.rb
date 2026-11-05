@@ -1,7 +1,7 @@
 class Scryer < Formula
   desc "Self-hosted media acquisition and management platform"
   homepage "https://github.com/scryer-media/scryer"
-  version "0.21.23"
+  version "0.21.24"
   license "MIT"
 
   def install_support_files
@@ -31,25 +31,25 @@ class Scryer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.23/scryer-darwin-arm64-portable.tar.gz"
-      sha256 "7f8289445c4130e82e0298149c55e6dec7c9dd3d335dd454421bfb39ed5729ca"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.24/scryer-darwin-arm64-portable.tar.gz"
+      sha256 "520913c8e5d56e67cc60386504b27c20dd81c3296ab13d1663356407057cf15c"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.23/scryer-darwin-x86_64-portable.tar.gz"
-      sha256 "d96da9733a08d5c34706d35899b220092a341372afa6bd9a0b1f3f26e44fbcc9"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.24/scryer-darwin-x86_64-portable.tar.gz"
+      sha256 "ad74ebf67175ca147819e36fd082164c5795d3f49606283cbe9a30fc3d60ee26"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.23/scryer-linux-arm64-portable.tar.gz"
-      sha256 "1832bab6bb010777e71905d69c0d07fb4f3da0acf3325a36763beb0864638e5a"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.24/scryer-linux-arm64-portable.tar.gz"
+      sha256 "c98a8038f4a2b84c603ece557841bb55ebad413366b62a3e5fb17a4e11abde87"
     end
 
     on_intel do
-      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.23/scryer-linux-x86_64-portable.tar.gz"
-      sha256 "2b52bf65d3a892b722db721d3ec431e52edf787ba2171a2ecb0f258236fc891f"
+      url "https://github.com/scryer-media/scryer/releases/download/scryer-v0.21.24/scryer-linux-x86_64-portable.tar.gz"
+      sha256 "b5bb1815d14812c70791b12bb1646fbe6499d125e00a6d08f89f7bc04edbf758"
     end
   end
 
